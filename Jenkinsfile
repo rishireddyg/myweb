@@ -12,3 +12,7 @@ node{
     mail bcc: '', body: '''hi there ,
 rishi here, there was a results from jenkins.''', cc: 'rishireddy.12345@gmail.com', from: '', replyTo: '', subject: 'test mail from jenkins', to: 'rishi.g4777@gmail.com
 }
+  stage('slack Notification'){
+    slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#integration-git-maven', color: 'good', message: 'hi welcome to rishi projects', tokenCredentialId: 'slack-demo', username: 'rrconsultants'
+}
+}
